@@ -62,14 +62,14 @@
 
                                 <li v-for="(vo,index) in age" :key="index" class="clearfix">
                                     <div class="fl ls clearfix">
-                                        <div class="ls-bg fr" :style='{width:vo.boy === 0 ? 0 : (vo.boy/(vo.boy+vo.girl))*100+"%",height:"0.15rem",background:"#00c4d6"}'></div>
+                                        <div class="ls-bg fr" :style='{width:vo.boy === 0 ? 0 : (vo.boy/(2000))*100+"%",height:"0.2rem",background:"#00c4d6"}'></div>
                                         <p class="fr" style="text-align: right">{{vo.boy}}</p>
                                     </div>
 
                                     <div class="fl text">{{vo.duan}}</div>
 
                                     <div class="fl cs clearfix">
-                                        <div class="cs-bg fl" :style='{width:vo.girl === 0 ? 0 : (vo.girl/(vo.boy+vo.girl))*100+"%",height:"0.15rem",background:"#FF892E"}'></div>
+                                        <div class="cs-bg fl" :style='{width:vo.girl === 0 ? 0 : (vo.girl/(1500))*100+"%",height:"0.2rem",background:"#FF892E"}'></div>
                                         <p class="fl">{{vo.girl}}</p>
                                     </div>
                                 </li>
@@ -442,24 +442,24 @@ function initVue(){
             },
             //年龄分布
             age: [
-                { boy: 0, girl: 0, duan: ">70", all: 40000 },
-                { boy: 7, girl: 5, duan: "60-69", all: 40000 },
-                { boy: 46, girl: 41, duan: "50-59", all: 40000 },
-                { boy: 3633, girl: 4450, duan: "40-49", all: 40000 },
-                { boy: 5000, girl: 5351, duan: "30-39", all: 40000 },
-                { boy: 1794, girl: 2400, duan: "20-29", all: 40000 },
-                { boy: 336, girl: 387, duan: "＜20", all: 40000 }
+                { boy: 0, girl: 0, duan: ">70"},
+                { boy: 47, girl: 58, duan: "60-69"},
+                { boy: 125, girl: 141, duan: "50-59"},
+                { boy: 593, girl: 760, duan: "40-49" },
+                { boy: 1343, girl: 1106, duan: "30-39" },
+                { boy: 534, girl: 479, duan: "20-29" },
+                { boy: 59, girl: 67, duan: "＜20"}
             ],
             //会员注册分析
             menbers: {
                 //名称
                 menbersName: ['汇总', '当天', '近一天', '近二天', '近三天', '近四天', '近五天', '近六天', '近七天', ],
                 //辅助
-                assist: [0, 0, 400, 800, 2500, 5900, 9500, 13500, 17600],
+                assist: [0,0, 12, 17, 29, 32, 35, 49, 59],
                 //总计
-                aggregate: [21900],
+                aggregate: [240],
                 //新增人数
-                newlyIncareased: [3651,67, 67, 283, 567, 600, 667, 683, 717],
+                newlyIncareased: [0,7, 12, 17, 29, 32, 35, 49, 59],
             },
             //活跃度分析
             liveness: {
@@ -477,7 +477,7 @@ function initVue(){
                 //行业名称
                 industryName: ['机械制造', '建筑业', '服务', '服装业', '医疗服务', '教育', '政府机关', '房地产', '邮政快递', '餐饮'],
                 //人数
-                numbers: [8383, 1834, 1668, 1002, 673, 516, 189, 384, 452, 168],
+                numbers: [789, 531, 335, 187, 102, 100, 100, 89, 51, 50],
 
             },
 
@@ -486,33 +486,33 @@ function initVue(){
                 //领域名称
                 followName: ['亲子', '青春期', '婚恋', '更年期', '心身健康保障', '职业生涯规划', '健康管理', '国学', '国防', '文化'],
                 followNum: [
-                    { value: 10001, name: '亲子' },
-                    { value: 6673, name: '青春期' },
-                    { value: 6849, name: '婚恋' },
-                    { value: 5178, name: '更年期' },
-                    { value: 5164, name: '心身健康保障' },
-                    { value: 2833, name: '职业生涯规划' },
-                    { value: 2667, name: '健康管理' },
-                    { value: 2167, name: '国学' },
-                    { value: 1450, name: '国防' },
-                    { value: 667, name: '文化' },
+                    { value: 594, name: '亲子' },
+                    { value: 489, name: '青春期' },
+                    { value: 324, name: '婚恋' },
+                    { value: 300, name: '更年期' },
+                    { value: 291, name: '心身健康保障' },
+                    { value: 208, name: '职业生涯规划' },
+                    { value: 156, name: '健康管理' },
+                    { value: 133, name: '国学' },
+                    { value: 92, name: '国防' },
+                    { value: 59, name: '文化' },
                 ]
             },
             //心理主题热度分析
             psychology: {
                 //
                 psychologyName: [
-                    { text: '婚恋家庭', max: 10000, color: '#fff', },
-                    { text: '亲子教育', max: 10000, color: '#fff', },
-                    { text: '人际交往', max: 10000, color: '#fff', },
-                    { text: '情绪问题', max: 10000, color: '#fff', },
-                    { text: '职场心理', max: 10000, color: '#fff', },
-                    { text: '心理健康', max: 10000, color: '#fff', },
-                    { text: '个人成长', max: 10000, color: '#fff', },
+                    { text: '婚恋家庭', color: '#fff', },
+                    { text: '亲子教育',  color: '#fff', },
+                    { text: '人际交往', color: '#fff', },
+                    { text: '情绪问题', color: '#fff', },
+                    { text: '职场心理',color: '#fff', },
+                    { text: '心理健康', color: '#fff', },
+                    { text: '个人成长', color: '#fff', },
                 ],
                 //次数
                 psychologyNum: [{
-                    value: [5164, 6018, 3600, 3849, 4015, 1827, 1851],
+                    value: [629, 584, 544, 358, 316, 297, 254],
                     name: '心理主题热度分析'
                 }]
             },
