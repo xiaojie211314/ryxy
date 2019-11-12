@@ -62,14 +62,14 @@
 
                                 <li v-for="(vo,index) in age" :key="index" class="clearfix">
                                     <div class="fl ls clearfix">
-                                        <div class="ls-bg fr" :style='{width:vo.boy === 0 ? 0 : (vo.boy/(vo.boy+vo.girl))*100+"%",height:"0.15rem",background:"#00c4d6"}'></div>
+                                        <div class="ls-bg fr" :style='{width:vo.boy === 0 ? 0 : (vo.boy/(73065))*50+"%",height:"0.15rem",background:"#00c4d6"}'></div>
                                         <p class="fr" style="text-align: right">{{vo.boy}}</p>
                                     </div>
 
                                     <div class="fl text">{{vo.duan}}</div>
 
                                     <div class="fl cs clearfix">
-                                        <div class="cs-bg fl" :style='{width:vo.girl === 0 ? 0 : (vo.girl/(vo.boy+vo.girl))*100+"%",height:"0.15rem",background:"#FF892E"}'></div>
+                                        <div class="cs-bg fl" :style='{width:vo.girl === 0 ? 0 : (vo.girl/(80662))*50+"%",height:"0.15rem",background:"#FF892E"}'></div>
                                         <p class="fl">{{vo.girl}}</p>
                                     </div>
                                 </li>
