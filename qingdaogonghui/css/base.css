@@ -240,6 +240,7 @@ em{font-style: normal;}
 
 #box .box-body .content{
 	padding: .2rem;
+    /*margin:.2rem; */
 }
 
 #box .box-title .top-line{
